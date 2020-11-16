@@ -48,7 +48,7 @@ body.modal-open {
     padding: 0 40px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1300px) {
   .container {
     width: 1200px;
     padding: 0;
@@ -739,7 +739,7 @@ div.modal-window_entry.show-entry {
     margin-left: auto;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1314px) {
+@media screen and (min-width: 768px) and (max-width: 1299px) {
   .answers-section .container {
     width: 768px;
     padding-top: 200px;
@@ -770,9 +770,9 @@ div.modal-window_entry.show-entry {
     margin-bottom: 52px;
   }
 }
-@media screen and (min-width: 1315px) {
+@media screen and (min-width: 1300px) {
   .answers-section .container {
-    width: 1315px;
+    width: 1300px;
     padding-top: 280px;
     padding-bottom: 130px;
   }
@@ -780,7 +780,7 @@ div.modal-window_entry.show-entry {
     font-size: 46px;
   }
   .answers-section__item {
-    width: 425px;
+    width: 420px;
     height: 396px;
     padding: 40px 30px 55px 30px;
   }
@@ -796,6 +796,7 @@ div.modal-window_entry.show-entry {
   .answers-section__list {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 30px;
   }
   .answers-section__subtitle {
     font-size: 20px;
@@ -808,11 +809,10 @@ div.modal-window_entry.show-entry {
   }
 }
 .programm-section {
-  max-width: 100%;
-  position: relative;
   background-color: #111518;
 }
 .programm-section .container {
+  position: relative;
   padding-top: 50px;
   padding-bottom: 537px;
 }
@@ -826,8 +826,26 @@ div.modal-window_entry.show-entry {
   color: #ffffff;
 }
 .programm-section__list {
-  padding-left: 68px;
-  margin-bottom: 50px;
+  padding-left: 23%;
+  display: inline-block;
+}
+@media screen and (min-width: 480px) {
+  .programm-section__list {
+    padding-left: 33%;
+  }
+}
+.programm-section__line {
+  position: absolute;
+  top: 6.5%;
+  left: 28%;
+  background-image: url(/programm-vector.9b9c3d16.svg);
+  width: 2px;
+  height: 1248px;
+}
+@media screen and (min-width: 480px) {
+  .programm-section__line {
+    left: 35.5%;
+  }
 }
 .programm-section__item:not(:last-child) {
   margin-bottom: 40px;
@@ -845,6 +863,7 @@ div.modal-window_entry.show-entry {
 }
 .programm-section__semester::before {
   content: "";
+  z-index: 2;
   display: block;
   margin-right: 20px;
   background-image: url("/programm-orange-dot.e90affd1.svg");
@@ -877,16 +896,18 @@ div.modal-window_entry.show-entry {
 }
 .programm-section__image {
   position: absolute;
-  right: 0;
-  top: 70%;
+  right: 0%;
+  top: 71.5%;
 }
 
 .advantages-section {
-  width: 280px;
   position: absolute;
-  z-index: 9;
-  padding-bottom: 0 20px;
-  top: 74%;
+  width: 280px;
+  z-index: 1;
+  top: 76%;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
 }
 .advantages-section__title {
   margin-bottom: 30px;
@@ -896,7 +917,7 @@ div.modal-window_entry.show-entry {
   letter-spacing: 0.03em;
   color: #ffffff;
 }
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 767px) {
   .advantages-section__title {
     width: 136px;
   }
@@ -907,13 +928,12 @@ div.modal-window_entry.show-entry {
   padding-left: 30px;
   padding-right: 34px;
   background-color: #ffffff;
-  box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
 }
 .advantages-section__item:not(:last-child) {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .advantages-section__number {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.64;
@@ -983,7 +1003,7 @@ div.modal-window_entry.show-entry {
   margin-top: 10px;
   font-style: normal;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.25;
   text-align: center;
   letter-spacing: 0.08em;
@@ -993,7 +1013,7 @@ div.modal-window_entry.show-entry {
   margin-top: 10px;
   font-style: normal;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.7;
   text-align: center;
   color: #3d3d3d;
@@ -1005,6 +1025,7 @@ div.modal-window_entry.show-entry {
   line-height: 1.7;
   text-align: center;
   color: #ff6b09;
+  cursor: pointer;
 }
 
 .small-slider {
@@ -1071,6 +1092,26 @@ div.modal-window_entry.show-entry {
   width: 25px;
   height: 15px;
   fill: #ff6b09;
+}
+.small-slider .slick-slide.slick-current .small-slider__img {
+  border: 2px solid #ff6b09;
+  border-radius: 50%;
+}
+
+.big-slider__item {
+  text-align: center;
+}
+.big-slider .slick-track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.big-slider .slick-list {
+  overflow: hidden;
+}
+.big-slider__img {
+  width: 90px;
+  height: 90px;
 }
 
 .footer-section__btn {
