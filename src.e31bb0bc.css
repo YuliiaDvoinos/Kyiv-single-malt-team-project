@@ -495,6 +495,8 @@ div.modal-window_entry.show-entry {
 .problems-section .container {
   padding-top: 50px;
   position: relative;
+  margin-left: auto;
+  margin-right: auto;
 }
 .problems-section__title {
   font-family: "Montserrat", sans-serif;
@@ -545,6 +547,9 @@ div.modal-window_entry.show-entry {
   .problems-section {
     height: 545px;
   }
+  .problems-section .container {
+    width: 320px;
+  }
   .problems-section__list {
     max-width: 280px;
     margin-top: 25px;
@@ -562,8 +567,7 @@ div.modal-window_entry.show-entry {
   .problems-section .container {
     padding-top: 60px;
     position: relative;
-    margin-left: auto;
-    margin-right: auto;
+    width: 768px;
   }
   .problems-section__title {
     display: inline-block;
@@ -576,7 +580,7 @@ div.modal-window_entry.show-entry {
     flex-direction: row;
     flex-wrap: wrap;
     align-content: space-between;
-    width: 688px;
+    max-width: 688px;
     margin-top: 25px;
     padding: 30px 46px 30px 96px;
   }
@@ -591,6 +595,56 @@ div.modal-window_entry.show-entry {
   .problems-section__item:nth-child(n+5) {
     margin-bottom: 0;
   }
+}
+@media screen and (min-width: 1200px) {
+  .problems-section {
+    height: 560px;
+    background-image: url(/fire.4fc00094.svg);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+  }
+  .problems-section .container {
+    max-width: 1600px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .problems-section__title {
+    font-size: 46px;
+    line-height: 1.3;
+    width: 800px;
+  }
+  .problems-section__list {
+    width: 1200px;
+    margin-top: 70px;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    padding: 70px 112px 60px 112px;
+  }
+  .problems-section__item {
+    width: calc((100% - 2 * 40px) / 3);
+    font-size: 20px;
+    line-height: 1.2;
+    align-content: space-between;
+    margin-right: 25px;
+  }
+  .problems-section__item:nth-child(3n) {
+    margin-right: 0px;
+  }
+  .problems-section__item:nth-child(n+4) {
+    margin-top: 32;
+    margin-bottom: 0;
+  }
+  .problems-section__number {
+    font-size: 20px;
+    line-height: 1.65;
+  }
+}
+.answers-section .container {
+  margin-left: auto;
+  margin-right: auto;
 }
 .answers-section__title {
   font-style: normal;
@@ -610,7 +664,7 @@ div.modal-window_entry.show-entry {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   cursor: pointer;
 }
-.answers-section__item:hover, .answers-section__item:focus, .answers-section__item:hover .answers-section__icon, .answers-section__item:hover .answers-section__subtitle, .answers-section__item:hover .answers-section__description, .answers-section__item:hover .answers-section__description:before {
+.answers-section__item:hover, .answers-section__item:focus, .answers-section__item:hover .answers-section__icon, .answers-section__item:hover .answers-section__subtitle, .answers-section__item:hover .answers-section__description {
   background-color: #ff6b09;
   color: #ffffff;
   fill: #ffffff;
@@ -659,10 +713,17 @@ div.modal-window_entry.show-entry {
   margin-bottom: 20px;
 }
 
+.answers-section__description:hover::before {
+  background-color: #ffffff;
+}
+
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .answers-section .container {
+    width: 320px;
     padding-top: 200px;
     padding-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .answers-section__item {
     display: block;
@@ -670,6 +731,80 @@ div.modal-window_entry.show-entry {
     padding-top: 30px;
     padding-bottom: 25px;
     width: 280px;
+  }
+}
+@media screen and (min-width: 480px) {
+  .answers-section .container {
+    width: 480px;
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1314px) {
+  .answers-section .container {
+    width: 768px;
+    padding-top: 200px;
+    padding-bottom: 50px;
+  }
+  .answers-section__title {
+    font-size: 26px;
+    line-height: 1.308;
+  }
+  .answers-section__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .answers-section__item {
+    width: 334px;
+    height: 334px;
+    padding-top: 40px;
+    padding-bottom: 28px;
+  }
+  .answers-section__item:nth-child(odd) {
+    margin-right: 20px;
+  }
+  .answers-section__item:not(:last-child) {
+    margin-top: 27px;
+  }
+  .answers-section__subtitle {
+    margin-bottom: 52px;
+  }
+}
+@media screen and (min-width: 1315px) {
+  .answers-section .container {
+    width: 1315px;
+    padding-top: 280px;
+    padding-bottom: 130px;
+  }
+  .answers-section__title {
+    font-size: 46px;
+  }
+  .answers-section__item {
+    width: 425px;
+    height: 396px;
+    padding: 40px 30px 55px 30px;
+  }
+  .answers-section__item:nth-child(3n+1) {
+    margin-right: 20px;
+  }
+  .answers-section__item:nth-child(3n) {
+    margin-left: 20px;
+  }
+  .answers-section__item:nth-last-child(n+4) {
+    margin-top: 20px;
+  }
+  .answers-section__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .answers-section__subtitle {
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 32px;
+  }
+  .answers-section__description {
+    font-size: 18px;
+    line-height: 1.556;
   }
 }
 .programm-section {
@@ -872,9 +1007,70 @@ div.modal-window_entry.show-entry {
   color: #ff6b09;
 }
 
+.small-slider {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 185px;
+}
 .small-slider__img {
   width: 54px;
   height: 54px;
+}
+
+.small-slider {
+  min-width: 0;
+}
+.small-slider__wrapper {
+  position: relative;
+}
+.small-slider__item {
+  border: none;
+}
+.small-slider .slick-track {
+  display: flex;
+  padding: 0 50px;
+  align-items: center;
+  justify-content: center;
+}
+.small-slider .slick-list {
+  overflow: hidden;
+}
+.small-slider .slick-slide:not(:last-child) {
+  margin-right: 10px;
+}
+.small-slider .slick-arrow {
+  position: absolute;
+  z-index: 10;
+  font-size: 0;
+  background-color: transparent;
+  border-style: none;
+}
+.small-slider .slick-arrow.slick-prev {
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  display: block;
+  background-image: url(/Arrow-left.a137d132.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 25px;
+  height: 15px;
+  fill: #ff6b09;
+}
+.small-slider .slick-arrow.slick-next {
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  display: block;
+  background-image: url(/Arrow-right.ec55d17e.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 25px;
+  height: 15px;
+  fill: #ff6b09;
 }
 
 .footer-section__btn {
