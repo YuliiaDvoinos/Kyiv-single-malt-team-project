@@ -1565,7 +1565,7 @@ div.modal-window_entry.show-entry {
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
-  width: 185px;
+  width: 191px;
 }
 .small-slider__img {
   width: 54px;
@@ -1707,7 +1707,7 @@ div.modal-window_entry.show-entry {
   }
 
   .small-slider {
-    width: 480px;
+    width: 560px;
     margin-top: 30px;
   }
   .small-slider .slick-slide:not(:last-child) {
