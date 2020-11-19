@@ -325,6 +325,9 @@ div.modal-window_entry.show-entry {
     margin-top: 25px;
     padding-bottom: 47px;
   }
+  .hero .hero-section__title-and-picture {
+    display: block;
+  }
   .hero-section__title {
     font-style: normal;
     font-weight: 800;
@@ -439,12 +442,17 @@ div.modal-window_entry.show-entry {
     padding: 0 30px;
     margin: 0 auto;
     width: 768px;
-    margin-top: 70px;
+  }
+  .hero .hero-section__title-and-picture {
+    display: flex;
+    height: 315px;
+    width: 768px;
   }
   .hero-section__title {
     margin: 0;
     display: block;
     width: 332px;
+    height: 132px;
     font-weight: 800;
     font-size: 26px;
     line-height: 34px;
@@ -454,6 +462,7 @@ div.modal-window_entry.show-entry {
   }
   .hero-section__not-simple {
     margin: 0;
+    margin-top: 35px;
   }
   .hero-section__button {
     display: block;
@@ -461,11 +470,7 @@ div.modal-window_entry.show-entry {
   .hero-section__pictures {
     display: flex;
     width: 380px;
-    height: 321px;
-    position: absolute;
-    margin-top: 146px;
-    top: 0px;
-    left: 48%;
+    height: 320px;
     padding: 0;
     background-image: url("/hero-tablet-ellipse-back.82a17790.png");
     background-repeat: no-repeat;
@@ -479,9 +484,10 @@ div.modal-window_entry.show-entry {
   }
   .hero-section__container-rewiev {
     flex-direction: row-reverse;
+    width: 715px;
     display: inline-flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
   }
   .hero-section__container-rewiev-list:nth-child(n+2) {
     margin: 0px;
@@ -495,18 +501,23 @@ div.modal-window_entry.show-entry {
     background-image: url("/background.eaba9334.png");
     background-repeat: no-repeat;
     background-position-x: -63px;
-    background-position-y: -115px;
+    background-position-y: -140px;
   }
   .hero-section {
     padding: 0 30px;
     margin: 0 auto;
     width: 1300px;
-    height: 864px;
-    padding-top: 137px;
+    height: 720px;
+  }
+  .hero .hero-section__title-and-picture {
+    display: flex;
+    width: 1490px;
+    height: 720px;
   }
   .hero-section__title {
     display: block;
-    width: 650px;
+    width: 610px;
+    padding-top: 97px;
     margin: 0;
     font-weight: 800;
     font-size: 58px;
@@ -515,7 +526,7 @@ div.modal-window_entry.show-entry {
     color: #111518;
   }
   .hero-section__not-simple {
-    padding: 0;
+    padding-top: 25px;
     margin: 0;
     font-weight: 500;
     font-size: 20px;
@@ -534,7 +545,10 @@ div.modal-window_entry.show-entry {
     font-size: 20px;
   }
   .hero-section__not-simple-garante-yougot {
+    width: 560px;
+    height: 145px;
     display: flex;
+    flex-wrap: wrap;
   }
   .hero-section__button {
     display: block;
@@ -546,10 +560,6 @@ div.modal-window_entry.show-entry {
     justify-content: center;
     width: 842px;
     height: 720px;
-    margin-top: 149px;
-    position: absolute;
-    top: 0px;
-    left: 47%;
     padding: 0;
     background-image: url("/hero-desktopellipseback.82630b7e.png");
     background-repeat: no-repeat;
@@ -561,38 +571,40 @@ div.modal-window_entry.show-entry {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1200px;
+    width: 1300px;
     max-width: 99%;
     padding-top: 0;
-    padding-left: 30px;
+    padding-left: 29px;
+    padding-right: 29px;
   }
   .hero-section__container-rewiev {
     flex-direction: row-reverse;
     display: inline-flex;
-    align-items: center;
+    justify-content: flex-end;
     position: relative;
     left: -19px;
-    margin-top: 105px;
+    margin-top: 146px;
     padding-bottom: 130px;
+    width: 1300px;
   }
   .hero-section__container-rewiev-list {
     margin: 0;
-    width: 430px;
+    width: 450px;
     height: 60px;
   }
   .hero-section__container-rewiev-list-text {
     display: flex;
     width: 360px;
     font-weight: 700;
-    font-size: 17px;
+    font-size: 20px;
   }
   .hero-section__container-rewiev-list:nth-child(n+2) {
     margin: 0px;
   }
   .hero-section__svg {
     position: relative;
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 102px;
     left: 18px;
   }
 }
@@ -719,8 +731,12 @@ div.modal-window_entry.show-entry {
     padding-top: 100px;
   }
   .problems-section__title {
+    display: block;
     font-size: 46px;
     line-height: 1.3;
+    width: 866px;
+    margin-right: auto;
+    margin-left: auto;
   }
   .problems-section__list {
     width: 1300px;
@@ -757,11 +773,15 @@ div.modal-window_entry.show-entry {
     height: 472px;
     right: 0%;
     bottom: 0%;
-    transform: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform: background-color 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: background-color;
+    transition-duration: 1250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 3s;
   }
   .problems-section__image:hover, .problems-section__image:focus {
     fill: #ff6b09;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 1250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 .answers-section .container {
@@ -942,21 +962,45 @@ div.modal-window_entry.show-entry {
   background-image: url("/programm-mobile-half.e37d3669.png");
   background-repeat: no-repeat;
   background-position: 100% 77%;
+  background-size: 40%;
+}
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (-o-min-device-pixel-ratio: 2/1), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .programm-section {
+    background-image: url("/programm-mobile-half@2x.86936ad6.png");
+  }
 }
 @media screen and (min-width: 480px) {
   .programm-section {
     background-image: url("/programm-mobile.db09796a.png");
+    background-size: 40%;
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 480px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 480px), screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 480px), screen and (min-resolution: 192dpi) and (min-width: 480px), screen and (min-resolution: 2dppx) and (min-width: 480px) {
+  .programm-section {
+    background-image: url("/programm-mobile@2x.fdf025b5.png");
   }
 }
 @media screen and (min-width: 768px) {
   .programm-section {
-    background-image: url("/programm-tablet.0daed763.png");
+    background-image: url("/programm-tablet.f550ec33.png");
+    background-size: 42%;
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .programm-section {
+    background-image: url("/programm-tablet@2x.b6bc46bf.png");
   }
 }
 @media screen and (min-width: 1300px) {
   .programm-section {
-    background-image: url("/programm-desktop.e8544671.png");
-    background-position: 0 97%;
+    background-image: url("/programm-desktop.83e46d01.png"), url("/programm-vector-rotate90.fbfab9b4.svg");
+    background-position: 0 90%, 0 21%;
+    background-size: 39%, 100% 2px;
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1300px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1300px), screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 1300px), screen and (min-resolution: 192dpi) and (min-width: 1300px), screen and (min-resolution: 2dppx) and (min-width: 1300px) {
+  .programm-section {
+    background-image: url("/programm-desktop@2x.f93535b9.png"), url("/programm-vector-rotate90.fbfab9b4.svg");
   }
 }
 .programm-section .container {
@@ -996,6 +1040,7 @@ div.modal-window_entry.show-entry {
   .programm-section__title {
     margin-bottom: 92px;
     font-size: 46px;
+    text-align: center;
   }
 }
 .programm-section__list {
@@ -1015,17 +1060,18 @@ div.modal-window_entry.show-entry {
 @media screen and (min-width: 1300px) {
   .programm-section__list {
     display: flex;
-    justify-content: space-between;
     padding-left: 0;
   }
 }
-.programm-section__line {
-  position: absolute;
-  top: 6.5%;
-  left: 28%;
-  background-image: url(/programm-vector.9b9c3d16.svg);
-  width: 2px;
-  height: 1225px;
+@media screen and (max-width: 1299px) {
+  .programm-section__line {
+    position: absolute;
+    top: 6.5%;
+    left: 28%;
+    background-image: url(/programm-vector.9b9c3d16.svg);
+    width: 2px;
+    height: 1223px;
+  }
 }
 @media screen and (min-width: 480px) {
   .programm-section__line {
@@ -1039,31 +1085,32 @@ div.modal-window_entry.show-entry {
     height: 680px;
   }
 }
-@media screen and (min-width: 1300px) {
-  .programm-section__line {
-    background-image: url(/programm-vector-rotate90.fbfab9b4.svg);
-    width: 100%;
-    height: 2px;
-    top: 20.9%;
-    left: 0;
+@media screen and (max-width: 767px) {
+  .programm-section__item:not(:last-child) {
+    margin-bottom: 40px;
   }
 }
-.programm-section__item:not(:last-child) {
-  margin-bottom: 40px;
-}
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1299px) {
   .programm-section__item:not(:last-child) {
     margin-bottom: 30px;
   }
 }
 @media screen and (min-width: 1300px) {
   .programm-section__item {
-    width: calc(100% - 4 * 30px);
+    width: 230px;
+  }
+  .programm-section__item:not(:last-child) {
+    margin-right: 30px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1299px) {
   .programm-section__item--position {
     display: flex;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .programm-section__item--position {
+    background-color: #111518;
   }
 }
 .programm-section__semester {
@@ -1081,7 +1128,7 @@ div.modal-window_entry.show-entry {
   .programm-section__semester {
     display: inline-block;
     margin-bottom: 25px;
-    font-size: 30px;
+    font-size: 20px;
     line-height: 0.93;
   }
 }
@@ -1102,6 +1149,19 @@ div.modal-window_entry.show-entry {
 @media screen and (min-width: 1300px) {
   .programm-section__semester::before {
     margin-bottom: 60px;
+  }
+}
+.programm-section__semester--number-size {
+  font-size: 14px;
+}
+@media screen and (max-width: 1299px) {
+  .programm-section__semester--number-size {
+    margin-right: 5px;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .programm-section__semester--number-size {
+    font-size: 30px;
   }
 }
 .programm-section__features {
@@ -1184,6 +1244,7 @@ div.modal-window_entry.show-entry {
 @media screen and (min-width: 1300px) {
   .advantages-section {
     width: 1300px;
+    top: 80%;
   }
 }
 .advantages-section__title {
@@ -1324,7 +1385,9 @@ div.modal-window_entry.show-entry {
   border: 1px solid #ff6b09;
   margin-bottom: 20px;
 }
-.teacher-section__text {
+.teacher-section__item {
+  display: flex;
+  margin-bottom: 25px;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -1333,17 +1396,13 @@ div.modal-window_entry.show-entry {
   letter-spacing: 0.06em;
   color: #111518;
 }
-.teacher-section__item {
-  display: flex;
-  margin-bottom: 24px;
-}
 .teacher-section__item::before {
+  display: block;
   content: "";
-  display: inline-block;
-  margin-right: 35px;
+  background-image: url("/check.957671c0.png");
   width: 17px;
   height: 14px;
-  outline: 1px solid red;
+  margin-right: 10px;
 }
 .teacher-section__description {
   font-family: "Montserrat", sans-serif;
@@ -1375,22 +1434,19 @@ div.modal-window_entry.show-entry {
   .teacher-section__title {
     padding-bottom: 20px;
   }
+  .teacher-section__item:not(:last-child) {
+    margin-bottom: 24px;
+  }
+  .teacher-section__check {
+    display: inline-flex;
+    width: 17px;
+    height: 14px;
+    fill: #ff6b09;
+  }
   .teacher-section .picture {
     display: block;
     width: 243px;
     height: 306px;
-  }
-}
-@media screen and (min-width: 480px) {
-  .teacher-section {
-    margin: 0 auto;
-  }
-  .teacher-section__wrapper {
-    display: flex;
-  }
-  .teacher-section__img {
-    display: block;
-    margin-right: 20px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1299px) {
@@ -1423,7 +1479,7 @@ div.modal-window_entry.show-entry {
     padding-bottom: 130px;
   }
   .teacher-section__title {
-    font-size: 30px;
+    font-size: 46px;
     line-height: 1.233;
     letter-spacing: 0.03em;
     margin-bottom: 50px;
@@ -1434,15 +1490,19 @@ div.modal-window_entry.show-entry {
   }
   .teacher-section__wrapper {
     display: flex;
-    width: 1205px;
   }
   .teacher-section__item {
     font-size: 16px;
     line-height: 1.233;
+    margin-bottom: 30px;
   }
   .teacher-section__description {
     font-size: 18px;
     line-height: 1.556;
+    padding-bottom: 25px;
+  }
+  .teacher-section_link {
+    margin-top: 30px;
   }
   .teacher-section__about {
     width: 642px;
