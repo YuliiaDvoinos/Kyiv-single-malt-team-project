@@ -320,23 +320,24 @@
             display: flex;
             justify-content: space-evenly;
             
-            width: 615px;
-            height: 507px;
+            width: 660px;
+            height: 505px;
             padding: 0;
-            padding-left: 45px;
+            padding-left: 15px;
             margin-top: 30px;
             background-image: url('../images/desktop/hero-desktopellipseback.png');
             background-repeat: no-repeat;
             background-position-y: 32px;
-            background-position-x: 0px;
+            background-position-x: 1px;
             background-size: contain;
+            margin-left: 26px;
             
             
         }
         
         .hero-section__pictures-modified {
             width: 541px;
-            height: 541px;
+            height: 573px;
             display: flex;
         }
         
