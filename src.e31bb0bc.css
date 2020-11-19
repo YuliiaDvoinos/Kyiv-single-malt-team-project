@@ -8,9 +8,6 @@
 body {
   font-family: "Montserrat", sans-serif;
 }
-body.modal-open {
-  overflow: hidden;
-}
 
 .list {
   list-style: none;
@@ -67,6 +64,7 @@ body.modal-open {
   cursor: pointer;
 }
 
+.footer-section__btn:hover,
 .footer-section__btn:focus {
   background-color: rgba(255, 107, 9, 0.8);
 }
@@ -95,10 +93,6 @@ body.modal-open {
     height: 70px;
   }
 }
-body {
-  position: relative;
-}
-
 .btn_sign {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
@@ -110,10 +104,13 @@ body {
   border: 2px solid #ff6b09;
   background-color: inherit;
   cursor: pointer;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.btn_sign:focus,
 .btn_sign:focus {
   background-color: rgba(255, 107, 9, 0.8);
+  color: white;
 }
 
 @media screen and (max-width: 767px) {
@@ -378,6 +375,7 @@ div.modal-window_entry.show-entry {
   .hero-section__svg {
     width: 60px;
     height: 60px;
+    fill: #FF6B09;
   }
   .hero-section__container {
     padding-top: 30px;
@@ -494,18 +492,6 @@ div.modal-window_entry.show-entry {
   }
   .hero-section__container-rewiev-list:nth-child(even) {
     padding-left: 20px;
-  }
-}
-@media screen and (min-width: 1199px) {
-  .hero-section__container-rewiev {
-    display: flex;
-    width: 789px;
-    justify-content: space-around;
-    padding-left: 20px;
-  }
-
-  .hero-section__pictures {
-    margin-left: 37px;
   }
 }
 @media screen and (min-width: 1300px) {
@@ -1971,6 +1957,7 @@ div.modal-window_entry.show-entry {
   cursor: pointer;
 }
 
+.footer-section__btn:hover,
 .footer-section__btn:focus {
   background-color: rgba(255, 107, 9, 0.8);
 }
@@ -2487,6 +2474,7 @@ div.modal-window_entry.show-entry {
 .scrollup {
   position: fixed;
   display: flex;
+  z-index: 999;
   padding: 4px 10px;
   font-size: 20px;
   border-top-left-radius: 4px;
@@ -2496,7 +2484,7 @@ div.modal-window_entry.show-entry {
 
 @media screen and (max-width: 767px) {
   .scrollup {
-    right: 20px;
+    left: 85%;
     bottom: 0px;
     width: 40px;
     height: 40px;
@@ -2506,7 +2494,7 @@ div.modal-window_entry.show-entry {
 }
 @media screen and (min-width: 768px) and (max-width: 1299px) {
   .scrollup {
-    right: 5px;
+    left: 85%;
     bottom: 50px;
     width: 70px;
     height: 70px;
@@ -2576,6 +2564,7 @@ div.modal-window_entry.show-entry {
   cursor: pointer;
 }
 
+.footer-section__btn:hover,
 .footer-section__btn:focus {
   background-color: rgba(255, 107, 9, 0.8);
 }
