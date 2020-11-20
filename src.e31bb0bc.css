@@ -375,7 +375,7 @@ div.modal-window_entry.show-entry {
   .hero-section__svg {
     width: 60px;
     height: 60px;
-    fill: #FF6B09;
+    fill: #ff6b09;
   }
   .hero-section__container {
     padding-top: 30px;
@@ -444,7 +444,6 @@ div.modal-window_entry.show-entry {
   .hero .hero-section__title-and-picture {
     display: flex;
     height: 315px;
-    width: 768px;
   }
   .hero-section__title {
     margin: 0;
@@ -500,7 +499,6 @@ div.modal-window_entry.show-entry {
     background-repeat: no-repeat;
     background-position-x: -63px;
     background-position-y: -140px;
-    padding: 0 30px;
     margin: 0 auto;
   }
   .hero-section {
@@ -585,7 +583,6 @@ div.modal-window_entry.show-entry {
   .hero-section__container-rewiev {
     flex-direction: row-reverse;
     display: inline-flex;
-    justify-content: flex-end;
     position: relative;
     left: -19px;
     margin-top: 146px;
@@ -594,7 +591,7 @@ div.modal-window_entry.show-entry {
   }
   .hero-section__container-rewiev-list {
     margin: 0;
-    width: 450px;
+    width: 400px;
     height: 60px;
   }
   .hero-section__container-rewiev-list-text {
@@ -778,11 +775,14 @@ div.modal-window_entry.show-entry {
     height: 472px;
     right: 0%;
     bottom: 0%;
-    transform: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: fill;
+    transition-duration: 450ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
-  .problems-section__image:hover, .problems-section__image:focus {
+
+  .problems-section:hover,
+.problems-section:focus {
     fill: #ff6b09;
-    transition: color 1250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 .answers-section .container {
@@ -801,13 +801,18 @@ div.modal-window_entry.show-entry {
   display: block;
   margin-top: 30px;
   text-align: center;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding-left: auto;
+  padding-right: auto;
+  background-color: transparent;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+  transition-property: background-color;
+  transition-duration: 450ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.answers-section__item:hover, .answers-section__item:focus, .answers-section__item:hover .answers-section__icon, .answers-section__item:hover .answers-section__subtitle, .answers-section__item:hover .answers-section__description {
+.answers-section__item:hover, .answers-section__item:focus {
   background-color: #ff6b09;
-  color: #ffffff;
-  fill: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 }
 .answers-section__subtitle {
   display: block;
@@ -820,6 +825,10 @@ div.modal-window_entry.show-entry {
   text-align: center;
   letter-spacing: 0.08em;
   color: #111518;
+  transform: color 450ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.answers-section__item:hover .answers-section__subtitle, .answers-section__item:focus .answers-section__subtitle {
+  color: #ffffff;
 }
 .answers-section__description {
   display: block;
@@ -833,6 +842,7 @@ div.modal-window_entry.show-entry {
   text-align: center;
   letter-spacing: 0.08em;
   color: #b9b9b9;
+  transform: color 450ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .answers-section__description::before {
   content: "";
@@ -846,6 +856,13 @@ div.modal-window_entry.show-entry {
   text-align: center;
   border-radius: 2px;
   background-color: #ff6b09;
+  transform: background-color 450ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.answers-section__item:hover .answers-section__description, .answers-section__item:focus .answers-section__description {
+  color: #ffffff;
+}
+.answers-section__item:hover .answers-section__description:before, .answers-section__item:focus .answers-section__description:before {
+  background-color: #fff;
 }
 .answers-section__icon {
   width: 57px;
@@ -853,10 +870,12 @@ div.modal-window_entry.show-entry {
   fill: #ff6b09;
   cursor: pointer;
   margin-bottom: 20px;
+  transform: fill 450ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.answers-section__item:hover .answers-section__description::before {
-  background-color: #ffffff;
+.answers-section__item:hover .answers-section__icon,
+.answers-section__item:focus .answers-section__icon {
+  fill: #ffffff;
 }
 
 @media screen and (max-width: 767px) {
@@ -995,11 +1014,23 @@ div.modal-window_entry.show-entry {
 @media screen and (min-width: 1300px) {
   .programm-section {
     background-image: url("/programm-desktop.83e46d01.png"), url("/programm-vector-rotate90.fbfab9b4.svg");
-    background-position: 0 90%, 0 21%;
+    background-position: 0 85%, 0 21%;
     background-size: 39%, 100% 2px;
   }
 }
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 1300px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1300px), screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 1300px), screen and (min-resolution: 192dpi) and (min-width: 1300px), screen and (min-resolution: 2dppx) and (min-width: 1300px) {
+  .programm-section {
+    background-image: url("/programm-desktop@2x.f93535b9.png"), url("/programm-vector-rotate90.fbfab9b4.svg");
+  }
+}
+@media screen and (min-width: 1600px) {
+  .programm-section {
+    background-image: url("/programm-desktop.83e46d01.png"), url("/programm-vector-rotate90.fbfab9b4.svg");
+    background-position: 0 87%, 0 21%;
+    background-size: 660px 502px, 100% 2px;
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1600px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1600px), screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 1600px), screen and (min-resolution: 192dpi) and (min-width: 1600px), screen and (min-resolution: 2dppx) and (min-width: 1600px) {
   .programm-section {
     background-image: url("/programm-desktop@2x.f93535b9.png"), url("/programm-vector-rotate90.fbfab9b4.svg");
   }
@@ -1376,7 +1407,7 @@ div.modal-window_entry.show-entry {
 .teacher-section__subtitle::after {
   content: "";
   display: block;
-  border: 2px solid #b9b9b9;
+  border-bottom: 2px solid #b9b9b9;
   margin-top: 15px;
   margin-bottom: 20px;
 }
@@ -1385,7 +1416,7 @@ div.modal-window_entry.show-entry {
   display: block;
   width: 20px;
   height: 2px;
-  border: 1px solid #ff6b09;
+  border-bottom: 2px solid #ff6b09;
   margin-bottom: 20px;
 }
 .teacher-section__item {
@@ -1536,6 +1567,7 @@ div.modal-window_entry.show-entry {
 .guarantees__list {
   padding-top: 30px;
   padding-bottom: 30px;
+  position: relative;
 }
 .guarantees__title {
   font-family: "Montserrat", sans-serif;
@@ -1550,11 +1582,9 @@ div.modal-window_entry.show-entry {
 }
 .guarantees__line {
   position: absolute;
-  z-index: 999;
-  top: 45px;
-  left: -25px;
-  height: 284px;
-  border: 1px dashed #b9b9b9;
+  left: 6px;
+  height: 310px;
+  border-left: 1px dashed #b9b9b9;
 }
 .guarantees__item {
   display: flex;
@@ -1574,9 +1604,12 @@ div.modal-window_entry.show-entry {
   display: block;
   background-image: url(/campfire.9d5432b0.svg);
   width: 40px;
-  height: 20px;
+  height: 30px;
   background-repeat: no-repeat;
+  background-position: center;
   background-size: contain;
+  z-index: 999;
+  background-color: #f1f1f1;
 }
 .guarantees__text--special {
   color: #ff6b09;
@@ -1585,6 +1618,15 @@ div.modal-window_entry.show-entry {
 @media screen and (min-width: 480px) and (max-width: 767px) {
   .guarantees {
     background: linear-gradient(180deg, white 17%, #f1f1f1 1%);
+  }
+  .guarantees__line {
+    left: 7px;
+    height: 200px;
+  }
+  .guarantees__item::before {
+    background-position: center;
+    width: 25px;
+    height: 40px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1600,6 +1642,12 @@ div.modal-window_entry.show-entry {
     margin-right: 25px;
     width: 20px;
     background-position: bottom;
+    background-position: center;
+  }
+  .guarantees__line {
+    left: 86px;
+    height: 200px;
+    border-left: 2px dashed #b9b9b9;
   }
 }
 @media screen and (min-width: 1300px) {
@@ -1620,8 +1668,13 @@ div.modal-window_entry.show-entry {
     line-height: 1.4;
   }
   .guarantees__item::before {
-    width: 40px;
-    height: 30px;
+    width: 30px;
+    height: 40px;
+  }
+  .guarantees__line {
+    border-left: 2px dashed #b9b9b9;
+    left: 125px;
+    height: 240px;
   }
 }
 .reviews-section .container {
@@ -2417,11 +2470,6 @@ div.modal-window_entry.show-entry {
     height: 23px;
     fill: #ff6b09;
     margin-right: 10px;
-  }
-
-  .footer-section__copy {
-    padding-left: 40px;
-    width: 768px;
   }
 }
 @media screen and (min-width: 1300px) {
