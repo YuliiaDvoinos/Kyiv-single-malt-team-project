@@ -133,6 +133,15 @@ body {
     min-width: 336px;
     height: 70px;
   }
+
+  .page-header__link:hover, .page-header__link:focus {
+    color: #ff6b09;
+  }
+  .page-header__link {
+    transition-property: color;
+    transition-duration: 450ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 @media screen and (max-width: 1299px) {
   .page-header__logo-main.is-open {
